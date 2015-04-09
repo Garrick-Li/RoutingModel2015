@@ -1,0 +1,11 @@
+package cmu.routing.constants;
+
+public class ModelConstants
+{
+    /* This enumerator holds the constants for all the supported models */
+    public enum Model
+    {
+        NOMINAL, DELTA_OBJ_EV, CCP, ECCP, DELTA_EV, EV
+    }
+
+}
