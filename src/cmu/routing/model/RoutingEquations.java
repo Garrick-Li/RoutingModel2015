@@ -21,7 +21,7 @@ public interface RoutingEquations
      * @throws IloException
      *             Thrown when any error during creation of objective function
      */
-    public void setObjectiveFunction(IloCplex cplex, RoutingData data)
+	public void setObjectiveFunction(IloCplex cplex, RoutingData data)
             throws IloException;
 
     /**
@@ -38,28 +38,27 @@ public interface RoutingEquations
     //public void setConstraints(IloCplex cplex, RoutingData data)
       //      throws IloException;
     
-    public IloNumVar[] getX();
+	public IloNumVar[] getX();
 
-    public IloRange[] getCoverConstraints1();
+	public IloRange[] getCoverConstraints1();
     
-    public IloRange[] getCoverConstraints2();
+	public IloRange[] getCoverConstraints2();
 
-    public IloRange[] getFlightsInConstraints1();
+	public IloRange[] getFlightsInConstraints1();
+
+	public IloRange[] getFlightsInConstraints2();
     
-    public IloRange[] getFlightsInConstraints2();
+	public IloRange[] getFlightsOutConstraints1();
     
-    public IloRange[] getFlightsOutConstraints1();
-    
-    public IloRange[] getFlightsOutConstraints2();
+	public IloRange[] getFlightsOutConstraints2();
 
-    public IloRange[] getCountConstraints();
+	public IloRange[] getCountConstraints();
 
-    void setConstraints(IloCplex cplex, RoutingData data,
-            int[][] stringsInSolution) throws IloException;
+	void setConstraints(IloCplex cplex, RoutingData data, int[][] stringsInSolution) throws IloException;
 
-    public IloRange[] getBoundX();
+	public IloRange[] getBoundX();
 
-	  void setConstraints(IloCplex cplex, RoutingData data) throws IloException;
+	void setConstraints(IloCplex cplex, RoutingData data) throws IloException;
 
   	public IloRange[] getCoverConstraintsEqual();
 
@@ -71,7 +70,7 @@ public interface RoutingEquations
 
   	public IloRange[] getConstraints235();
 
-  	public IloRange[] getConstraints237();
+	public IloRange[] getConstraints237();
 
 
 }
